@@ -24,8 +24,11 @@ padding: 20px;
 margin-bottom: 10vh;
 margin-right: 4vh;
 margin-left: 4vh;
+
+background-color: rgb(238, 228, 189);
 box-shadow: 10px 10px 20px rgba(46, 46, 46, 0.377) inset; 
 }
+/* Flex settings and alignment */
 .row{
     display: flex;
     flex-wrap: wrap;
@@ -36,12 +39,13 @@ box-shadow: 10px 10px 20px rgba(46, 46, 46, 0.377) inset;
 img{
     max-width: 100%;
 }
+/* Flex settings inherited from row class */
 .column{
     flex: 1;
     /* max-width: 25%; */
     padding: 10px;
 }
-
+/* Adjust flex properties on medium screen size */
 @media screen and (max-width: 900px) {
     .column{
         -ms-flex: 50%;
@@ -50,18 +54,24 @@ img{
        
     }
 }
+/* Adjust from row to column on small screen size */
 @media screen and (max-width: 500px) {
     .row{
        flex-direction: column;
     }
 }
+/* Visual changes */
 .holder{
 filter: grayscale(20);
 padding: 10px;
+border-radius: 25px;
 
 }
+/* Revert Visual changes on hover */
 .holder:hover {
-    filter: grayscale(0);
+filter: grayscale(0);
 transform: scale(1.1);
 box-shadow: 5px 5px 10px rgba(7, 7, 7, 0.425);
+border-radius: 0px;
+transition-duration: .5s;
 }
